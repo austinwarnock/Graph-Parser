@@ -1,0 +1,8 @@
+    start: node*
+    node: NAME ":" neighbors
+    neighbors: neighbor ("," neighbor)*
+    neighbor: NAME | NAME "(" INT ")"
+    %import common.CNAME -> NAME
+    %import common.INT
+    %import common.WS
+    %ignore WS
